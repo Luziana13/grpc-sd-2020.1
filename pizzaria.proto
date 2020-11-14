@@ -1,0 +1,29 @@
+syntax = "proto3";
+package pizzaria;
+
+//mensagem: objeto json que armazenda dados que sao trocados entre o cliente e servidor
+message Pizza {
+    string nome = 1;
+    string foto = 2;
+    double preco = 3;
+}
+
+message Vazia { }
+
+message ArrayDePizzas {
+    repeated Pizza pizzas = 1;
+}
+
+message IdentificadorDaPizza {
+    int32 indice = 1;
+}
+//Servicos = mesmo conceito de api
+service PizzaService {
+    rpc ConsultarPizzas (Vazia) returns (ArrayDePizzas);
+    rpc ConsultarUmaPizzas (IdentificadorDaPizza) returns (Pizza);
+    rpc CadastrarPizzas (Pizza) returns (Vazia);
+}
+
+
+
+

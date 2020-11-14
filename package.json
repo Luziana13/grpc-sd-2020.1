@@ -1,0 +1,17 @@
+{
+  "name": "grpc-pizzaria-2020-1",
+  "version": "1.0.0",
+  "main": "server/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "grpc": "^1.24.4"
+  },
+  "scripts": {
+    "start": "nodemon ./server/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+
+}
